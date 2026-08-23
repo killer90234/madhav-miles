@@ -1,8 +1,8 @@
 {
-  "name": "madhav-miles",
+  "name": "mahadev-miles",
   "version": "1.0.0",
   "private": true,
-  "description": "Madhav Miles - premium travel discovery and holiday package platform",
+  "description": "Mahadev Miles - premium travel discovery and holiday package platform",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

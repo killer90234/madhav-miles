@@ -24,10 +24,10 @@ function toNumberEnv(value: string | undefined, fallback: number): number {
 }
 
 export const siteConfig = {
-  name: 'Madhav Miles',
+  name: 'Mahadev Miles',
   tagline: 'Travel better. Travel personal.',
   description:
-    'Madhav Miles plans domestic and international holidays around you — handpicked stays, honest pricing and itineraries built for the way you like to travel.',
+    'Mahadev Miles plans domestic and international holidays around you — handpicked stays, honest pricing and itineraries built for the way you like to travel.',
   url: siteUrl,
   /** Digits only, required by the wa.me link format. */
   whatsappNumber: rawWhatsApp.replace(/\D/g, ''),

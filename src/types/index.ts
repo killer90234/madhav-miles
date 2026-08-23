@@ -1,5 +1,5 @@
 /**
- * Domain models for Madhav Miles.
+ * Domain models for Mahadev Miles.
  * These mirror the eventual CMS content entities so components never need to
  * change when local seed data is swapped for an API/CMS response.
  */

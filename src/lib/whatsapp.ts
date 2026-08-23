@@ -19,17 +19,17 @@ function buildMessage(context: WhatsAppContext): string {
   switch (context.type) {
     case 'destination':
       return context.destinationName
-        ? `Hi Madhav Miles! I'm interested in a holiday to ${context.destinationName}. Could you share packages and prices?`
-        : "Hi Madhav Miles! I'd like help planning a holiday.";
+        ? `Hi Mahadev Miles! I'm interested in a holiday to ${context.destinationName}. Could you share packages and prices?`
+        : "Hi Mahadev Miles! I'd like help planning a holiday.";
     case 'package':
-      return `Hi Madhav Miles! I'm interested in the "${context.packageTitle}" package. Please share details and pricing.`;
+      return `Hi Mahadev Miles! I'm interested in the "${context.packageTitle}" package. Please share details and pricing.`;
     case 'offer':
-      return `Hi Madhav Miles! I'd like to know more about your "${context.offerTitle}" offer.`;
+      return `Hi Mahadev Miles! I'd like to know more about your "${context.offerTitle}" offer.`;
     case 'departure':
-      return `Hi Madhav Miles! I'm interested in the group departure "${context.departureTitle}" (${context.departureDate}). Please share availability and booking steps.`;
+      return `Hi Mahadev Miles! I'm interested in the group departure "${context.departureTitle}" (${context.departureDate}). Please share availability and booking steps.`;
     case 'general':
     default:
-      return "Hi Madhav Miles! I'd like help planning a holiday.";
+      return "Hi Mahadev Miles! I'd like help planning a holiday.";
   }
 }
 

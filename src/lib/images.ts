@@ -4,7 +4,7 @@
  * Curated Unsplash imagery appropriate to each destination / place.
  * All URLs use images.unsplash.com directly (no deprecated source.unsplash.com)
  * so builds are deterministic and CDN-cached.
- * When licensed Madhav Miles photography is available, only this file changes.
+ * When licensed Mahadev Miles photography is available, only this file changes.
  */
 
 export type ImagePreset = 'hero' | 'wide' | 'card' | 'portrait' | 'square' | 'thumb';

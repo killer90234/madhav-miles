@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * Madhav Miles design tokens.
+ * Mahadev Miles design tokens.
  * Palette direction: deep forest/navy-green primary, warm sand secondary,
  * terracotta/gold accent, warm-white background, charcoal text.
  * Deliberately avoids generic SaaS purple/blue.

@@ -39,7 +39,7 @@ export function Footer() {
               MM
             </span>
             <span className="font-display text-xl font-semibold text-cream">
-              Madhav<span className="text-accent-soft"> Miles</span>
+              Mahadev<span className="text-accent-soft"> Miles</span>
             </span>
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed">

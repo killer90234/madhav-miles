@@ -7,7 +7,7 @@ import type { PolicyDocument } from '@/types';
  * can be built and reviewed, but they are drafts. They must be checked by the
  * business owner and a legal advisor, and the placeholder commercial terms
  * (deposit percentages, cancellation windows, registration numbers) replaced
- * with the actual terms Madhav Miles operates under before going live.
+ * with the actual terms Mahadev Miles operates under before going live.
  */
 
 export const policies: PolicyDocument[] = [
@@ -15,13 +15,13 @@ export const policies: PolicyDocument[] = [
     slug: 'terms-and-conditions',
     title: 'Terms & Conditions',
     description:
-      'The terms that apply when you book a holiday with Madhav Miles, including booking, payment and liability.',
+      'The terms that apply when you book a holiday with Mahadev Miles, including booking, payment and liability.',
     lastUpdated: '2025-03-01',
     sections: [
       {
         heading: 'About these terms',
         paragraphs: [
-          'These terms apply to every booking made with Madhav Miles, whether through this website, over the phone, on WhatsApp or in person. By confirming a booking you accept them on behalf of everyone travelling on that booking.',
+          'These terms apply to every booking made with Mahadev Miles, whether through this website, over the phone, on WhatsApp or in person. By confirming a booking you accept them on behalf of everyone travelling on that booking.',
           'Please read them alongside your written quotation, which sets out the specific inclusions, exclusions and payment schedule for your trip. Where the two differ, the written quotation for your booking takes precedence.',
         ],
       },
@@ -109,13 +109,13 @@ export const policies: PolicyDocument[] = [
     slug: 'privacy-policy',
     title: 'Privacy Policy',
     description:
-      'What personal information Madhav Miles collects, why we collect it, how we use it and the choices you have.',
+      'What personal information Mahadev Miles collects, why we collect it, how we use it and the choices you have.',
     lastUpdated: '2025-03-01',
     sections: [
       {
         heading: 'Scope',
         paragraphs: [
-          'This policy explains how Madhav Miles handles personal information collected through this website, our enquiry forms, WhatsApp conversations, phone calls and email.',
+          'This policy explains how Mahadev Miles handles personal information collected through this website, our enquiry forms, WhatsApp conversations, phone calls and email.',
         ],
       },
       {

@@ -51,7 +51,7 @@ export function Header() {
             MM
           </span>
           <span className="font-display text-xl font-semibold text-brand-dark">
-            Madhav<span className="text-accent"> Miles</span>
+            Mahadev<span className="text-accent"> Miles</span>
           </span>
         </Link>
 
