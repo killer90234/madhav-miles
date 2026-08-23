@@ -6,13 +6,14 @@ import type { Metadata } from 'next';
  */
 
 const rawWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim() || '919426930638';
-const siteUrlRaw = process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://www.madhavmiles.com';
+const siteUrlRaw = process.env.NEXT_PUBLIC_SITE_URL?.trim() || '';
 let siteUrl = siteUrlRaw;
-try {
-  // Validate URL — fallback if env contains empty/invalid value (e.g. '' on Vercel)
-  new URL(siteUrl);
-} catch {
-  siteUrl = 'https://www.madhavmiles.com';
+if (siteUrl) {
+  try {
+    new URL(siteUrl);
+  } catch {
+    siteUrl = '';
+  }
 }
 const phoneRaw = process.env.NEXT_PUBLIC_PHONE_NUMBER?.trim() || '+91 9426930638';
 const emailRaw = process.env.NEXT_PUBLIC_EMAIL?.trim() || 'mahadevmilestravels@gmail.com';
@@ -72,17 +73,27 @@ export function buildMetadata({
   publishedTime,
   keywords,
 }: PageMetaInput): Metadata {
-  const url = new URL(path, siteConfig.url).toString();
+  let url: string | undefined;
+  if (siteConfig.url) {
+    try {
+      url = new URL(path, siteConfig.url).toString();
+    } catch {
+      url = path;
+    }
+  } else {
+    url = path;
+  }
 
+  const hasBase = Boolean(siteConfig.url);
   return {
     title,
     description,
     keywords,
-    alternates: { canonical: url },
+    ...(hasBase && url ? { alternates: { canonical: url } } : {}),
     openGraph: {
       title,
       description,
-      url,
+      ...(hasBase && url ? { url } : {}),
       siteName: siteConfig.name,
       type,
       locale: 'en_IN',

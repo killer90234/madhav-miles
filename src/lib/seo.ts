@@ -12,7 +12,13 @@ import { siteConfig } from './site';
 type JsonLdObject = Record<string, unknown>;
 
 function absoluteUrl(path: string): string {
-  return new URL(path, siteConfig.url).toString();
+  const base = siteConfig.url?.trim();
+  if (!base) return path;
+  try {
+    return new URL(path, base).toString();
+  } catch {
+    return path;
+  }
 }
 
 export function organizationJsonLd(): JsonLdObject {
@@ -38,16 +44,21 @@ export function organizationJsonLd(): JsonLdObject {
 }
 
 export function websiteJsonLd(): JsonLdObject {
+  const base = siteConfig.url?.trim() || '';
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: siteConfig.name,
-    url: siteConfig.url,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteConfig.url}/packages?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
+    ...(base ? { url: base } : {}),
+    ...(base
+      ? {
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: `${base}/packages?q={search_term_string}`,
+            'query-input': 'required name=search_term_string',
+          },
+        }
+      : {}),
   };
 }
 

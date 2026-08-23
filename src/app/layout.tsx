@@ -26,8 +26,18 @@ const fontBody = Inter({
   display: 'swap',
 });
 
+function safeBaseUrl(): URL | undefined {
+  const raw = siteConfig.url?.trim();
+  if (!raw) return undefined;
+  try {
+    return new URL(raw);
+  } catch {
+    return undefined;
+  }
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  ...(safeBaseUrl() ? { metadataBase: safeBaseUrl() } : {}),
   title: {
     default: `${siteConfig.name} — Handcrafted India & International Holidays`,
     template: `%s | ${siteConfig.name}`,
